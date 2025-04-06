@@ -1,0 +1,102 @@
+/* Overall container style using consistent font and background */
+.user-dashboard {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.user-dashboard h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Spacing for sections */
+.loan-application,
+.my-loans {
+  margin-bottom: 30px;
+}
+
+.loan-application h3,
+.my-loans h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Loan form styling */
+.loan-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.loan-form .form-group {
+  margin-bottom: 15px;
+}
+
+.loan-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.loan-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Button styling matching the approve style */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #218838;
+}
+
+/* Table styling similar to AdminDashboard */
+.loans-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.loans-table th,
+.loans-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.loans-table th {
+  background-color: #f9f9f9;
+}
+
+.loans-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Link styling within table */
+.loans-table a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.loans-table a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  margin: 0;
+  background-color: #033a34;
+  color: white;
+  height: 64px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.logo-img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+}
+
+.icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+}
+
+.red-dot {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 8px;
+  height: 8px;
+  background: red;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.username {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin: 0;
+}
