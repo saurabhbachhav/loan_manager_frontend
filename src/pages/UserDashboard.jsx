@@ -15,7 +15,7 @@ function UserDashboard() {
   // Fetch the logged-in user's loans (assuming the backend filters by user)
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/loans", {
+      .get("https://loan-manager-backed-2.onrender.com/api/loans", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
@@ -33,7 +33,7 @@ function UserDashboard() {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/loans",
+        "https://loan-manager-backed-2.onrender.com/api/loans",
         { ...loanForm },
         { headers: { Authorization: `Bearer ${token}` } }
       );

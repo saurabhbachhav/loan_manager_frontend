@@ -13,7 +13,7 @@ function VerifierDashboard() {
 
   const fetchLoans = () => {
     axios
-      .get("http://localhost:5000/api/loans", {
+      .get("https://loan-manager-backed-2.onrender.com/api/loans", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => setLoans(response.data))
@@ -23,7 +23,7 @@ function VerifierDashboard() {
   const updateLoanStatus = (loanId, status) => {
     axios
       .put(
-        `http://localhost:5000/api/loans/${loanId}/status`,
+        `https://loan-manager-backed-2.onrender.com/api/loans/${loanId}/status`,
         { status },
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -16,12 +16,15 @@ function AdminDashboard() {
   const fetchData = async () => {
     try {
       const [loanRes, userRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/loans", {
+        axios.get("https://loan-manager-backed-2.onrender.com/api/loans", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/users/count", {
-          headers: { Authorization: `Bearer ${token}` },
-        }),
+        axios.get(
+          "https://loan-manager-backed-2.onrender.com/api/users/count",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        ),
       ]);
       setLoans(loanRes.data);
       setUsers(userRes.data);
@@ -33,7 +36,7 @@ function AdminDashboard() {
   const handlePromote = async (userId) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/promote/${userId}`,
+        `https://loan-manager-backed-2.onrender.com/api/admin/promote/${userId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -46,7 +49,7 @@ function AdminDashboard() {
   const handleDemote = async (userId) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/demote/${userId}`,
+        `https://loan-manager-backed-2.onrender.com/api/admin/demote/${userId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -59,7 +62,7 @@ function AdminDashboard() {
   const updateStatus = async (loanId, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/loans/${loanId}/status`,
+        `https://loan-manager-backed-2.onrender.com/api/loans/${loanId}/status`,
         { status },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -71,9 +74,12 @@ function AdminDashboard() {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/delete/${userId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `https://loan-manager-backed-2.onrender.com/api/admin/delete/${userId}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       fetchData();
     } catch (err) {
       console.error("Error deleting user:", err);

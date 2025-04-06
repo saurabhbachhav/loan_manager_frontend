@@ -14,7 +14,7 @@ function LoanDetails() {
     const fetchLoan = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/loans/${id}`,
+          `https://loan-manager-backed-2.onrender.com/api/loans/${id}`,
           {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("token"),
@@ -34,9 +34,12 @@ function LoanDetails() {
   const handleStatusUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/loans/${id}/status`, {
-        status,
-      });
+      await axios.put(
+        `https://loan-manager-backed-2.onrender.com/api/loans/${id}/status`,
+        {
+          status,
+        }
+      );
       alert("Status updated successfully!");
       navigate("/dashboard");
     } catch (error) {

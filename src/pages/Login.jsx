@@ -15,7 +15,7 @@ function Login() {
     setError("");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://loan-manager-backed-2.onrender.com/api/auth/login",
         { email, password }
       );
       // Save token and role in localStorage
